@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="stylesheet" href="css/login_style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+</head>
+<body>
+    <header>
+        <div class="innerHead">
+           <div class="left">
+            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="home"></a></div>
+            <div class="gnb">
+                    <ul>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="whoweare.html">Who We Are</a></li>
+                        <li><a href="whatwedo.html">What We Do</a></li>
+                        <li><a href="#">Office</a></li>
+                        <li><a href="#">News &amp; insight</a></li>
+                    </ul>
+                </div>
+             </div>
+            <div class="right">
+               <div class="trigger">
+                    <a class="menu-trigger" href="#">
+                                                   <span> </span>
+                                                   <span> </span>
+                                                   <span> </span>
+                           </a>
+                </div>
+                <div class="brief">
+                    <div class="headerBox"><a href="login.html">BRIEF US!</a></div>
+                </div>
+                <div class="nation">
+                    <ul>
+                        <li>
+                           <select name="language" id="lang">
+                           <option value="KR">KR</option>
+                           <option value="KR">ENG</option>
+                           <option value="KR">JAP</option>
+                           <option value="KR">CHA</option> 
+                           </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+        </header>
+        
+        <section class="login">
+            <section id="SECTION_1">
+	<div id="DIV_2">
+		<h1 id="H1_3">
+			로그인
+		</h1>
+		<p id="P_4">
+			i.dec에 오신 것을 환영합니다.
+		</p>
+	</div>
+	<form id="FORM_5" method="POST">
+		<div id="DIV_6">
+			<input type="text" id="INPUT_7" name="email" placeholder="이메일" /> 
+			<label for="email" id="LABEL_8">
+				이메일
+			</label>
+		</div>
+		<div id="DIV_9">
+			<input type="hidden" id="INPUT_10" name="passwd" />
+			<input type="password" id="INPUT_11" placeholder="비밀번호" /> 
+			<label for="pw" id="LABEL_12">
+				비밀번호
+			</label>
+		</div>
+		<button id="BUTTON_26">
+			로그인
+		</button> <a href="/join.gom" id="A_27">회원가입</a>
+	</form>
+	<div id="DIV_28">
+		 <a href="/member/remind.gom?type=email" id="A_29">이메일 찾기</a> <a href="/member/remind.gom?type=password" id="A_30">비밀번호 찾기</a>
+		<div id="DIV_31">
+			 <a href="/license/" id="A_32">정품 등록 키 찾기</a>
+		</div>
+	</div>
+	<div id="DIV_33">
+		<p id="P_34">
+			SNS계정을 연동하여 <strong id="STRONG_35">간편하게 로그인 하세요.</strong>
+		</p> <a href="#" id="A_36"><img src="https://www.gomlab.com/gomlab_v2/ui/img/member/ico_google.svg?v=3" alt="google" id="IMG_37" /> <span id="SPAN_38">로그인</span></a> <a href="#" id="A_39"><img src="https://www.gomlab.com/gomlab_v2/ui/img/member/ico_facebook.svg?v=3" alt="facebook" id="IMG_40" /> <span id="SPAN_41">로그인</span></a>
+	</div>
+</section>
+        </section>
+        
+<!--        footer-->
+        <footer>
+        <div class="footer">
+        <div class="left">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="fnb">
+                <ul>
+                    <li><a href="whoweare.html">CONTACT US</a></li>
+                    <li><a href="whatwedo.html">PRIVACY</a></li>
+                    <li><a href="work.html">CAREER</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="sns">
+                <a href="index.html"><i class="fa fa-facebook-square"></i></a>
+                <a href="index.html"><i class="fa fa-twitter-square"></i></a>
+                <a href="index.html"><i class="fa fa-instagram"></i></a>
+                <a href="index.html"><i class="fa fa-google-plus-square"></i></a>
+                <a href="index.html"><i class="fa fa-youtube-square"></i></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    
+    <!--jquery-->
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <script>
+    var burger = $('.menu-trigger');
+
+    burger.each(function(index){
+    var $this = $(this);
+    
+    $this.on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active-' + (index+1));
+       })
+    });
+    </script>
+</body>
+</html>

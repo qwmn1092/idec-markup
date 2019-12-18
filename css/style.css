@@ -1,0 +1,1294 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+/*reset*/
+* {margin:0; padding:0;}
+a {color:inherit; text-decoration: none;}
+li{list-style: none;}
+h1,h2,h3,h4,h5,h6,p{margin: 0; padding: 0;}
+
+/*layout*/
+header {
+    width: 1920px;
+    height: 100%;
+    background-image: url(../img/visual_img01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.innerHead {
+    width: 1600px;
+    height: 140px;
+    margin: 0 auto;
+}
+.innerHead .left {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+.innerHead .left .logo{
+    float: left;
+    line-height: 120px;
+    padding-top: 20px;
+}
+.innerHead .left .gnb ul {
+    overflow: hidden;
+}
+.innerHead .left .gnb ul li {
+    float: left;
+    margin-left: 70px;
+    line-height: 140px;
+}
+.innerHead .left .gnb ul li a {
+    display: block;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+.innerHead .right {
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+/*trigger responsive app*/
+
+.innerHead .trigger {
+    float: right;
+    width: 10%;
+    height: 100%;
+    line-height: 170px;
+    display: none;
+}
+
+.innerHead .trigger .menu-trigger,
+.innerHead .trigger .menu-trigger span {
+    transition: all .4s;
+    box-sizing: border-box;
+    float: none;
+    display: inline-block;
+}
+.innerHead .trigger .menu-trigger {
+    position: relative;
+    width: 50px;
+    height: 44px;
+}
+.innerHead .trigger .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.innerHead .trigger .menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+.innerHead .trigger .menu-trigger span:nth-of-type(2) {
+    top: 20px;
+}
+.innerHead .trigger .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+/*trigger js*/
+.innerHead .trigger .menu-trigger.active-1 span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+}
+.innerHead .trigger .menu-trigger.active-1 span:nth-of-type(2) {
+    opacity: 0;
+}
+.innerHead .trigger .menu-trigger.active-1 span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+}
+
+/*trigger--*/
+.innerHead .nation {
+    width: 200px;
+    height: 100%;
+    float: right;
+    margin-top: 50px;
+}
+.innerHead .right .brief {
+    width: 140px;
+    height: 100%;
+    float: right;
+    margin-top: 45px;
+}
+.innerHead .right .headerBox {
+    width: 140px;
+    height: 50px;
+    background: #FEDC00;
+    margin-left: 30px;
+}
+.innerHead .right .headerBox a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: block;
+    color: #000;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .7s;
+}
+.innerHead .right .headerBox a:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+.innerHead .right .headerBox a:hover:after {
+    width: 100%;
+    opacity: 1;
+    z-index: -1;
+}
+.innerHead .right .headerBox a:hover {
+    color: #fff;
+}
+#lang {
+    width: 60px;
+    padding: 5px 12px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    background: url(../img/menu_arrow.gif)no-repeat 90% 55%;
+    color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #FEDC00;
+    border-radius: 0px;
+    float: right;
+}
+#lang option {
+    background: #2E170F;
+}
+/*main*/
+.main {
+    width: 100%;
+    height: 803px;
+    position: relative;
+}
+.main .mainTitle {
+    position: absolute;
+    left: 8%;
+    top: 55%;
+    transform: translateY(-50%);
+}
+.main .mainTitle h2 {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    font-weight: 100;
+    
+}
+.main .mainBox {
+    width: 250px;
+    height: 60px;
+    background: #FEDC00;
+    text-align: center;
+    margin-top: 50px;
+}
+.main .mainBox a {
+    width: 250px;
+    height: 60px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    line-height: 60px;
+    font-size: 22px;
+    position: relative;
+    position: absolute;
+    z-index: 1;
+    transition: all .3s;
+    overflow: hidden;
+}
+.main .mainBox a:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    left: -20px;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    transform: skewX(-15deg);
+    z-index: -1;
+    transition: all .5s;
+}
+.main .mainBox a:hover:after {
+    width: 150%;
+    transform: skewX(-15deg);
+}
+
+
+
+/*vision*/
+.visionWrap {
+    width: 1920px;
+}
+.vision {
+    width: 80%;
+    height: 620px;
+    margin: 0 auto;
+}
+.vision .title {
+    width: 40%;
+    float: left;
+    margin-top: 150px;
+}
+.vision .title h2 {
+    position: relative;
+    font-size: 53px;
+    font-family: 'anton', sans-serif;
+    font-weight: lighter;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+}
+.vision .titleText {
+    width: 60%;
+    float: right;
+}
+.vision .title p {
+    font-size: 38px;
+    margin-bottom: 60px;
+}
+.vision .titleText p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.vision .titleText p:nth-child(1) {
+    margin-bottom: 40px;
+    margin-top: 260px;
+}
+.vision .title a {
+    position: relative;
+    font-size: 17px;
+    font-family: 'Roboto Slab', serif;
+    color: #666;
+    padding: 15px 40px;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+.vision .title a:after {
+    content: '';
+    width: 0;
+    left: -25px;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    transform: skewX(40deg);
+    transition: all .4s;
+    z-index: -1;
+}
+.vision .title a:hover:after {
+    width: 150%;
+    transform: skewX(40deg);
+}
+.vision .title a:hover {
+    color: #fff;
+}
+.vision .title h2:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    bottom: 10px;;
+    width: 135px;
+    height: 28px;
+    background: rgba(254,220,0,0.6);
+    z-index: -1;
+}
+
+/*survice*/
+.service {
+    background: url(../img/service_img.jpg)no-repeat center / cover;
+    width: 1920px;
+    height: 100%;
+    z-index: -1;
+    text-align: center;
+}
+.service .title {
+    width: auto;
+    display: inline-block;
+    position: relative;
+    font-size: 53px;
+    font-family: 'anton', sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    letter-spacing: 2px;
+    padding-top: 150px;
+    z-index: 1;
+}
+.service .title:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    bottom: 10px;;
+    width: 165px;
+    height: 28px;
+    background: rgba(254,220,0,0.6);
+    z-index: -1;
+}
+.service .titleText {
+    font-size: 21px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
+.service .serviceBox {
+    width: 100%;
+    height: auto;
+}
+.service .serviceBox ul {
+    width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+}
+.service .serviceBox ul li {
+    float: left;
+    width: 15.6%;
+    height: 290px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+}
+.service .serviceBox ul li:first-child {
+    margin-left: 0;
+}
+.service .serviceBox ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.service .serviceBox ul li a p.hover {
+    display: none;
+    transition: all .1s;
+}
+.service .serviceBox ul li a:hover p.list {
+    display: none;
+    transition: all .1s;
+}
+.service .serviceBox ul li a:hover p.hover {
+    display: block;
+    transition: all .1s;
+    transform: translateY(-20px);
+}
+.service>a {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+    font-size: 17px;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #fff;
+    transition: all .3s;
+    z-index: 1;
+    overflow: hidden;
+}
+.service>a:after {
+    content: '';
+    width: 0;
+    left: -25px;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    background: rgba(255,255,255,0.8);
+    transform: skewX(40deg);
+    transition: all .4s;
+    z-index: -1;
+}
+.service>a:hover:after {
+    width: 150%;
+    transform: skewX(40deg);
+}
+.service>a:hover {
+    color: #000;
+}
+
+/*ourwork*/
+.ourwork {
+    width: 1920px;
+    height: auto;
+    background-color: #2F2A26;    
+}
+.ourwork .headImg {
+    position: relative;
+    width: 1600px;
+    height:auto;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.ourwork .headImg .img img {
+    width: 100%;
+    height: 100%;
+}
+.ourwork .headImg .detail {
+    position: absolute;
+    bottom: 23%;
+    left: 11%;
+}
+.ourwork .headImg .detail p a {
+    display: block;
+    position: absolute;
+    width: 100px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    border-radius: 40px;
+    transition: all .4s;
+    overflow: hidden;
+    z-index: 1;
+}
+.ourwork .headImg .detail p a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: -18px;
+    top: 0;
+    background: rgba(255,255,255,0.8);
+    transform: skewX(45deg);
+    transition: all .6s;
+    z-index: -1;
+}
+.ourwork .headImg .detail p a:hover:after {
+    width: 150%;
+    transform: skewX(45deg);
+}
+.ourwork .headImg .detail p a:hover {
+    color: #000;
+}
+
+/*bottom*/
+.ourwork .ourworkBot {
+    width: 1920px;
+    padding-bottom: 90px;
+}
+.ourwork .ourworkBot .botTitle {
+    width: 50%;
+}
+.ourwork .ourworkBot ul {
+    overflow: hidden;
+}
+.ourwork .ourworkBot ul li {
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding-top: 35px;
+}
+.ourwork .ourworkBot ul li a img {
+    background-position: center;
+    background-size: cover;
+}
+.ourwork .ourworkBot ul li:nth-child(3),
+.ourwork .ourworkBot ul li:nth-child(4),
+.ourwork .ourworkBot ul li:nth-child(5),
+.ourwork .ourworkBot ul li:nth-child(6) {
+    padding-top: 70px;
+}
+.ourwork .ourworkBot ul li:nth-child(1) {
+    margin-top: -80px;
+    text-align: left;
+}
+.ourwork .ourworkBot ul li:nth-child(3),
+.ourwork .ourworkBot ul li:nth-child(5){
+    margin-top: -400px;
+}
+.ourwork .ourworkBot ul li:nth-child(3) img,
+.ourwork .ourworkBot ul li:nth-child(5) img {
+    margin-right: -105px;   
+}
+.ourwork .ourworkBot ul li:nth-child(2) img,
+.ourwork .ourworkBot ul li:nth-child(4) img {
+    margin-left: -105px;
+}
+.ourwork .ourworkBot ul li:nth-child(1) h2,
+.ourwork .ourworkBot ul li:nth-child(1) p {
+    margin-left: 150px;
+}
+.ourwork .ourworkBot .botTitle {
+    color: #fff;
+}
+.ourwork .ourworkBot .botTitle h2 {
+    width: auto;
+    display: inline-block;
+    position: relative;
+    font-size: 53px;
+    font-family: 'anton', sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    letter-spacing: 2px;
+    padding-top: 100px;
+    z-index: 1;
+    margin-bottom: 35px;
+}
+.ourwork .ourworkBot .botTitle h2:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    bottom: 10px;;
+    width: 221px;
+    height: 28px;
+    background: rgba(254,220,0,0.6);
+    z-index: -1;
+}
+.ourwork .ourworkBot .botTitle p {
+    font-size: 21px;
+}
+.ourwork .ourworkBot .botTitle .yellow {
+    color: #FEDC00;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+.ourwork .ourworkBot .footBox  {
+    width: 41%;
+    height: 150px;
+    background: #FEDC00;
+    margin-top: 70px;
+    margin-left: 35px;
+}
+.ourwork .ourworkBot .footBox .boxText {
+    font-size: 25px;
+    color: #000;
+    text-align: left;
+    margin-left: 70px;
+    margin-top: -40px;
+    font-family: 'Roboto', sans-serif;
+}
+.ourwork .ourworkBot .footBox .boxText a {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    width: 180px;
+    height: 50px;
+    border: 2px solid #000;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .7s
+}
+.ourwork .ourworkBot .footBox .boxText a:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    left: -20px;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    transform: skewX(-35deg);
+    transition: all .5s;
+    z-index: -1;
+}
+.ourwork .ourworkBot .footBox .boxText a:hover:after {
+    width: 125%;
+    transform: skewX(-35deg);
+}
+.ourwork .ourworkBot .footBox .boxText a:hover {
+    color: #fedc00;
+}
+/*event*/
+.event {
+    width: 1920px;
+}
+.event .title {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.event .title h1 {
+    position: relative;
+    width: 125px;
+    margin: 0 auto;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+}
+.event .title h1:after {
+    position: absolute;
+    width: 125px;
+    content: '';
+    height: 25px;
+    left: 0;
+    bottom: 0;
+    background: rgba(254,220,0,0.6);
+    z-index: -1;
+}
+.event .eventTable {
+    margin: 0 auto;
+    width: 85%;
+    margin-bottom: 100px;
+}
+.event .eventTable .box {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.event .eventTable .box .eventTxt {
+    width: 50%;
+    padding-left: 150px;
+    padding-top: 30px;
+    float: left;
+}
+.event .eventTable .box .eventTxt h2 {
+    position: relative;
+    font-size: 21px;
+    padding-bottom: 30px;
+}
+.event .eventTable .box .eventTxt h2:before {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 5px;
+    background: #000;
+    top: -30px;
+}
+.event .eventTable .box .eventTxt p {
+    padding-bottom: 10px;
+}
+.event .eventTable .box .eventTxt p span {
+    position: relative;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto' ,sans-serif;
+}
+.event .eventTable .box .eventTxt p span:after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 8px;
+    left: 0;
+    bottom: 0;
+    background: rgba(254,220,0,0.6);
+    z-index: -1;
+}
+.event .eventTable .box .eventImg {
+    width: 30%;
+    float: left;
+    padding-left: 55px;
+}
+.event .eventTable .box .eventImg img {
+    box-shadow: 6px 5px 20px #999;
+    width: 100%;
+}
+
+
+
+/*footer*/
+footer {
+    width: 1920px;
+    height: 290px;
+    background: #2F2A26;
+}
+footer .footer {
+    width: 1600px;
+    height: auto;
+    margin: 0 auto;
+    
+}
+footer .left {
+    width: 60%;
+    height: 100%;
+}
+footer .left .logo {
+    float: left;
+    margin-top: 80px;
+}
+footer .left .fnb {
+    float: left;
+}
+footer .left .fnb ul {
+    overflow: hidden;
+    margin-left: 90px;
+}
+footer .left .fnb ul li {
+    float: left;
+    text-align: center;
+    margin-left: 30px;
+    padding-right: 20px;
+    margin-top: 25%;
+}
+footer .left .fnb ul li:nth-child(1),
+footer .left .fnb ul li:nth-child(2) {
+    border-right: 1px solid #FEDC00;
+}
+footer .left .fnb ul li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    color: #FEDC00;
+    font-family: 'Roboto slab';
+}
+footer .left .fnb ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+footer .right {
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+footer .right .sns {
+    line-height: 240px;
+    float: right;
+}
+footer .right .sns a {
+    font-size: 50px;
+    margin-left: 20px;
+    color: #fff;
+}
+footer .right .sns a:hover {
+    color: #fedc00;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+/*width*/
+    header {
+        width: 1024px;
+    }
+    .main {
+        width: 1024px;
+    }
+    .innerHead {
+        width: 95%;
+    }
+    .visionWrap {
+        width: 1024px;
+    }
+    .vision {
+        width: 95%;
+        height: 500px;
+    }
+    .service {
+        width: 1024px;   
+    }
+    .ourwork {
+        width: 1024px;
+    }
+    .event {
+        width: 1024px;
+    }
+    footer {
+        width: 1024px;
+    }
+    footer .footer {
+        width: 95%;
+    }
+    .ourwork .headImg {
+        width: 90%;
+    }
+    .ourwork .headImg img {
+        width: 100%;
+    }
+    .ourwork .ourworkBot {
+        width: 1024px;
+    }
+    
+    
+    
+    .vision .title {
+        margin-top: 110px
+    }
+    .vision .title p {
+        font-size: 25px;
+    }
+    .vision .titleText p {
+    font-size: 16px;
+    line-height: 1.6;
+    }
+    .vision .titleText p:nth-child(1) {
+    margin-bottom: 20px;
+    margin-top: 150px;
+    }
+    .ourwork .ourworkBot ul {
+        overflow: hidden;
+    }
+    .ourwork .ourworkBot ul li {
+        overflow: hidden;
+        width: 45%;
+    }
+    .ourwork .ourworkBot .botTitle p {
+        font-size: 17px;
+    }
+    .ourwork .ourworkBot ul li:nth-child(3),
+    .ourwork .ourworkBot ul li:nth-child(4),
+    .ourwork .ourworkBot ul li:nth-child(5) {
+    padding-top: 20px;
+}
+    .ourwork .ourworkBot ul li:nth-child(1) {
+    margin-top: 0;
+        padding: 0 0 0 20px;
+    text-align: left;
+}
+.ourwork .ourworkBot ul li:nth-child(3),
+.ourwork .ourworkBot ul li:nth-child(5){
+    margin-top: -100px;
+    padding-left: 30px;
+}
+    .ourwork .ourworkBot ul li:nth-child(6) {
+        padding-left: 20px;
+    }
+    .ourwork .ourworkBot ul li:nth-child(4) {
+        padding-left: 40px;
+    }
+.ourwork .ourworkBot ul li:nth-child(3) img,
+.ourwork .ourworkBot ul li:nth-child(5) img {
+    margin-right: 0;   
+}
+.ourwork .ourworkBot ul li:nth-child(2) img,
+.ourwork .ourworkBot ul li:nth-child(4) img {
+    margin-left: 0;
+}
+.ourwork .ourworkBot ul li:nth-child(1) h2,
+.ourwork .ourworkBot ul li:nth-child(1) p {
+    margin-left: 0;
+}
+    .ourwork .ourworkBot .footBox  {
+    width: 43%;
+    height: 150px;
+    background: #FEDC00;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+    .ourwork .ourworkBot .footBox .boxText {
+        margin-left: 40px;
+    }
+    .ourwork .ourworkBot .footBox .boxText h2 {
+        font-size: 30px;
+    }
+    .ourwork .ourworkBot ul li a img {
+        width: 100%;
+        height: 100%;
+    }
+    .service .serviceBox ul {
+        width: 100%;
+    }
+    .service .serviceBox ul li p img {
+        width: 100%;
+    }
+    .service .serviceBox ul li {
+        width: 15%;
+    }
+    .event .eventTable .box .eventImg {
+        width: 30%;
+    }
+    .event .eventTable .box .eventTxt {
+        padding-left: 40px;
+    }
+    
+    .innerHead .right .brief {
+        padding-right: 100px;
+    }
+    .innerHead .left .logo {
+        padding-left: 70px;
+        padding-top: 30px;
+    }
+    .innerHead .left .gnb {
+        display: none;
+    }
+    .innerHead .left {
+        width: 40%;
+    }
+    .innerHead .right {
+        width: 60%;
+    }
+    .innerHead .trigger {
+        display: inline-block;
+    }
+    footer {
+        width: 1024px;
+    }
+    footer .left .fnb {
+        display: none;
+    }
+    footer .right .sns {
+        width: 95%;
+    }
+    footer .right .sns a{
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*width*/
+    header {
+        width: 768px;
+    }
+    .main {
+        width: 768px;
+    }
+    .innerHead {
+        width: 95%;
+    }
+    .visionWrap {
+        width: 768px;
+    }
+    .vision {
+        width: 95%;
+        height: 500px;
+    }
+    .service {
+        width: 768px;   
+    }
+    .ourwork {
+        width: 768px;
+    }
+    .event {
+        width: 768px;
+    }
+    footer {
+        width: 768px;
+    }
+    footer .footer {
+        width: 95%;
+    }
+    .ourwork .headImg {
+        width: 90%;
+    }
+    .ourwork .headImg img {
+        width: 100%;
+    }
+    .ourwork .ourworkBot {
+        width: 768px;
+    }
+    
+    
+    .innerHead .right .brief {
+        display: none;
+    }
+    #lang {
+        margin-right: 50px;
+    }
+    .innerHead .trigger {
+        margin-right: 50px;
+    }
+    .innerHead .left .logo {
+        padding-left: 40px;
+    }
+    .main {
+        height: 500px;
+        text-align: center;
+    }
+    .main .mainTitle {
+        left: 13%;
+    }
+    .main .mainTitle h2 {
+        font-size: 40px;
+    }
+    .main .mainTitle .mainBox {
+        margin-left: 170px;
+    }
+    .vision .title {
+        width: 100%;
+        text-align: center;
+    }
+    .vision .title h2:after {
+        left: 40.8%;
+        bottom: 9px;
+    }
+    .vision .titleText {
+        display: none;
+    }
+    .service .title {
+        padding-top: 50px;
+    }
+    .service .titleText {
+        font-size: 15px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .service .titleText br {
+        display: none;
+    }
+    .service .serviceBox ul {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .service .serviceBox ul li {
+        width: 31%;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+    .service .serviceBox ul li:nth-child(1) {
+        margin-left: 10px;
+    }
+    .ourwork .ourworkBot .botTitle h2 {
+        padding-left: 70px;
+        margin-top: 35px
+    }
+    .ourwork .ourworkBot .botTitle h2:after {
+        left: 23.5%;
+    }
+    .ourwork .ourworkBot .botTitle p {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    .ourwork .ourworkBot ul li:nth-child(3),
+    .ourwork .ourworkBot ul li:nth-child(4),
+    .ourwork .ourworkBot ul li:nth-child(5) {
+    padding-top: 20px;
+}
+    .ourwork .ourworkBot ul li:nth-child(1) {
+    margin-top: 0;
+        padding: 0 0 0 20px;
+    text-align: left;
+}
+    .ourwork .ourworkBot ul li:nth-child(2) {
+        padding-top: 110px;
+        margin-left: -7px;
+    }
+    .ourwork .ourworkBot ul li:nth-child(3),
+    .ourwork .ourworkBot ul li:nth-child(5){
+    margin-top: -00px;
+    padding-left: 30px;
+}
+    .ourwork .ourworkBot ul li:nth-child(6) {
+        padding-left: 15px;
+        margin-left: 20px;
+        padding-top: 125px;
+    }
+    .ourwork .ourworkBot ul li:nth-child(4) {
+        padding-left: 20px;
+    }
+   .ourwork .ourworkBot ul li:nth-child(1) h2,
+   .ourwork .ourworkBot ul li:nth-child(1) p {
+    margin-left: 0;
+       padding-top: 30px;
+}
+    .ourwork .ourworkBot .footBox .boxText h2 {
+        font-size: 25px;
+    }
+    .event .box .eventTxt {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .event .box .eventTxt h2{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding-left: 120px;
+    }
+    .event .eventTable .box .eventTxt h2:before {
+        width: 100px;
+        left: 50%;
+    }
+    .event .box .eventTxt p {
+        display: none;
+    }
+    .event .eventTable .box .eventImg {
+        width: 80%;
+        padding-left: 65px;
+    }
+    footer .right {
+        width: 60%;
+    }
+    footer .left {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    /*width*/
+    header {
+        width: 414px;
+    }
+    .main {
+        width: 414px;
+    }
+    .innerHead {
+        width: 95%;
+    }
+    .visionWrap {
+        width: 414px;
+    }
+    .vision {
+        width: 95%;
+        height: 500px;
+    }
+    .service {
+        width: 414px;   
+    }
+    .ourwork {
+        width: 414px;
+    }
+    .event {
+        width: 414px;
+    }
+    footer {
+        width: 414px;
+    }
+    footer .footer {
+        width: 95%;
+    }
+    .ourwork .headImg {
+        display: none;
+    }
+    .ourwork .headImg img {
+        width: 100%;
+    }
+    .ourwork .ourworkBot {
+        width: 414px;
+    }
+    
+    
+    #lang {
+        display: none;
+    }
+    .innerHead .left .logo {
+        padding-left: px;
+    }
+    .innerHead .left .logo img {
+        width: 80%
+    }
+    .main .mainTitle {
+        width: 414px;
+        left: 3px;
+    }
+    .main .mainTitle h2 {
+        font-size: 30px;
+    }
+    .main .mainBox {
+        padding: 0;
+        transform: translateX(-35%);
+    }
+    .ourwork .ourworkBot ul {
+        padding: 0;
+        margin: 0;
+    }
+    .ourwork .ourworkBot ul li {
+        width: 100%;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    .ourwork .ourworkBot ul li:nth-child(1) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .ourwork .ourworkBot ul li:nth-child(2) {
+        padding: 0;
+    }
+    .ourwork .ourworkBot ul li:nth-child(3) {
+        padding: 0;
+    }
+    .ourwork .ourworkBot ul li:nth-child(4) {
+        padding: 0;
+    }
+    .ourwork .ourworkBot ul li:nth-child(5) {
+        padding: 0;
+    }
+    .ourwork .ourworkBot ul li:nth-child(6) {
+        padding: 120px;
+        margin: 0;
+    }
+    .ourwork .ourworkBot ul li:nth-child(6) .boxText {
+        margin: 0;
+    }
+    .ourwork .ourworkBot .footBox .boxText h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .ourwork .ourworkBot .botTitle h2 {
+        text-align: center;
+        margin: 0;
+        padding-left: 95px;
+    }
+    .ourwork .ourworkBot .botTitle h2:after {
+        left: 30%;
+    }
+    .ourwork .ourworkBot .botTitle p {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+    .vision .title h2:after {
+        left: 33%;
+    } 
+    .event {
+        display: none;
+    }
+    .service {
+        height: 100%;
+        height: 3000px;
+        overflow: hidden;
+    }
+    .service>a {
+        bottom: -200px;
+    }
+    .service .titleText {
+        display: none;
+    }
+    .service .serviceBox ul {
+        padding-top: 0;
+    }
+    .service .serviceBox ul li {
+        width: 100%;
+        margin: 0;
+        padding-top: 150px;
+    }
+    .service .serviceBox ul li:nth-child(1) {
+        padding-top: 40px;
+        margin: 0;
+    }
+    
+    footer {
+        height: 250px;
+        overflow: hidden;
+    }
+    footer .footer .right {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-top: -60px;
+    }
+    footer .footer .left {
+        width: 100%;
+    }
+    footer .footer .left .logo {
+        float: none;
+        padding-top: 20px;
+        margin: 0;
+        text-align: center;
+    }
+    footer .footer .right .sns {
+        float: none;
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 30px;
+        line-height: 150px;
+        margin: 0;
+        overflow: hidden;
+    }
+    footer .footer .right .sns a{
+        font-size: 45px;
+    }
+}
